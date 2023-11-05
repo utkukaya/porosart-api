@@ -59,7 +59,7 @@ public class TeamService : BaseService
             return new ResponseVM("Team member not found.");
         var teamContent = _db.TeamContent.FirstOrDefault(x => x.TeamId == teamMember.Id);
         if(teamContent != null){
-            _db.Remove(teamContentc);
+            _db.Remove(teamContent);
             _db.SaveChanges();
         }
         _db.Remove(teamMember);
