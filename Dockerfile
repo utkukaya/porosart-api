@@ -1,0 +1,38 @@
+# FROM mcr.microsoft.com/dotnet/core/sdk:6.0-bionic AS build
+# WORKDIR /app
+
+# copy csproj and restore as distinct layers
+# COPY *.sln .
+# COPY porosartapi/*.csproj ./porosartapi/
+# RUN dotnet restore
+
+# # copy everything else and build app
+# COPY BennyAPI/. ./BennyAPI/
+# WORKDIR /app/porosartapi
+# RUN dotnet publish -c Release -o out
+
+# FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-bionic AS runtime
+# WORKDIR /app
+# COPY --from=build /app/porosartapi/out .
+# EXPOSE 80
+# CMD ["dotnet", "porosartapi.dll"]
+
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0-bionic AS build-env
+
+# Copy csproj and restore as distinct layers
+COPY ./porosartapi/porosartapi.csproj ./porosartapi/porosartapi.csproj
+COPY *.sln .
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o build –no-restore
+
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
+WORKDIR /app
+# COPY –from=build-env ./build .
+COPY --from=build /app/porosartapi/out .
+ENV ASPNETCORE_URLS=http://*:8080
+EXPOSE 8080
+ENTRYPOINT [ "dotnet", "porosartapi.dll" ]
