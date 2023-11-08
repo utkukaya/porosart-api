@@ -1,0 +1,19 @@
+steps:
+# .NET Core SDK'yı kullanarak derleme işlemi
+- name: 'gcr.io/cloud-builders/dotnet'
+  args: ['publish', '-c', 'Release', '-o', 'app']
+
+# Gereksiz dosyaları temizleme
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['create', '-a', 'stdout', '-a', 'stderr', '-i', 'gcr.io/cloud-builders/tar', 'c']
+  id: 'cleanup'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['cp', '$(id)', '.:/workspace']
+  dir: 'app'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['cp', '.:/build', 'app:/build']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/porosart-api-c46jphp5cq-uc/porosart-api', '.']
+  dir: 'app'
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/porosart-api-c46jphp5cq-uc/porosart-api']
