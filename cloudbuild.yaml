@@ -1,0 +1,20 @@
+# Cloud builder for the dotnet builder.
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--tag=gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+  - '.'
+
+# Build the test projects
+- name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+  args: ['build']
+  dir: 'porosartapi'
+
+- name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+  args: ['build']
+  dir: 'porosartapi'
+
+images:
+- 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
