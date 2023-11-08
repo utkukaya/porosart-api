@@ -16,5 +16,10 @@ steps:
   args: ['build']
   dir: 'porosartapi'
 
+# Specify the --no-source flag to indicate that no source code should be uploaded
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--config=cloudbuild.yaml', '--no-source']
+
 images:
 - 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+
