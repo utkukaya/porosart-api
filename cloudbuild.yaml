@@ -1,25 +1,13 @@
-# Cloud builder for the dotnet builder.
-
 steps:
+# Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args:
-  - 'build'
-  - '--tag=gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
-  - '.'
-
-# Build the test projects
-- name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
-  args: ['build']
-  dir: 'porosartapi'
-
-- name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
-  args: ['build']
-  dir: 'porosartapi'
-
-# Specify the --no-source flag to indicate that no source code should be uploaded
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--config=cloudbuild.yaml', '--no-source']
-
+  args: ['build', '-t', 'gcr.io/crucial-oven-404213/porosartapi', '.']
+# Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/crucial-oven-404213/porosartapi']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'porosart-api', '--image', 'gcr.io/crucial-oven-404213/porosartapi', '--region', 'us-central1']
 images:
-- 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
-
+- gcr.io/crucial-oven-404213/porosartapi

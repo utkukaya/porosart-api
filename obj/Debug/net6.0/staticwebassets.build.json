@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qf+wP5jzrNl5OYp+aqCtofJ3vG1OqVyWtWAl7fMgBDk=",
+  "Hash": "a8NMgm8x7FqZfp+y/KtH59L/mtu/hx3q9f5/craqipA=",
   "Source": "porosartapi",
   "BasePath": "_content/porosartapi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "porosartapi/wwwroot",
       "Source": "porosartapi",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/334-3346844_fenerbahce-logo-fenerbahe-hd-png-download-removebg-preview.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/334-3346844_fenerbahce-logo-fenerbahe-hd-png-download-removebg-preview.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/334-3346844_fenerbahce-logo-fenerbahe-hd-png-download-removebg-preview.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/334-3346844_fenerbahce-logo-fenerbahe-hd-png-download-removebg-preview.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/atolye1.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/atolye1.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/atolye1.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/atolye1.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/atolye2.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/atolye2.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/atolye2.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/atolye2.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/bmc-full-logo-no-background.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/bmc-full-logo-no-background.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/bmc-full-logo-no-background.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/bmc-full-logo-no-background.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/card1.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/card1.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/card1.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/card1.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/card2.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/card2.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/card2.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/card2.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/default.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/default.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/default.jpg",
       "AssetKind": "All",
@@ -136,10 +136,61 @@
       "OriginalItemSpec": "wwwroot/Files/Images/default.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/edaEgilmez.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/download (1).jpeg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/download (1).jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/download (1).jpeg"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/download (1).png",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/download (1).png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/download (1).png"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/download.jpeg",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/download.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/download.jpeg"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/edaEgilmez.png",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/edaEgilmez.png",
       "AssetKind": "All",
@@ -153,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/edaEgilmez.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/edaErtem.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/edaErtem.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/edaErtem.jpg",
       "AssetKind": "All",
@@ -170,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/edaErtem.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/edaErtem.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/edaErtem.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/edaErtem.png",
       "AssetKind": "All",
@@ -187,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/edaErtem.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/emre_basalak.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/emre_basalak.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/emre_basalak.jpg",
       "AssetKind": "All",
@@ -204,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/emre_basalak.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/image10.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image10.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/image10.jpg",
       "AssetKind": "All",
@@ -221,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/image10.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/image11.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image11.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/image11.jpg",
       "AssetKind": "All",
@@ -238,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/image11.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/image12.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image12.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/image12.jpg",
       "AssetKind": "All",
@@ -255,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/image12.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/image7.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image7.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/image7.jpg",
       "AssetKind": "All",
@@ -272,10 +323,61 @@
       "OriginalItemSpec": "wwwroot/Files/Images/image7.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/melisLaraSeckin.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image8.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/image8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/image8.png"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/image9.jpg",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/image9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/image9.jpg"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/IMG_0800.PNG",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
+      "BasePath": "_content/porosartapi",
+      "RelativePath": "Files/Images/IMG_0800.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Files/Images/IMG_0800.PNG"
+    },
+    {
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/melisLaraSeckin.png",
+      "SourceId": "porosartapi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/melisLaraSeckin.png",
       "AssetKind": "All",
@@ -289,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/melisLaraSeckin.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/poros_atolye_erdogan.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/poros_atolye_erdogan.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/poros_atolye_erdogan.jpg",
       "AssetKind": "All",
@@ -306,10 +408,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/poros_atolye_erdogan.jpg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/seyithanTokkarabudak.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/seyithanTokkarabudak.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/seyithanTokkarabudak.png",
       "AssetKind": "All",
@@ -323,10 +425,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/seyithanTokkarabudak.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/site_logo.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/site_logo.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/site_logo.png",
       "AssetKind": "All",
@@ -340,10 +442,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/site_logo.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/tolgaAvcu.jpeg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/tolgaAvcu.jpeg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/tolgaAvcu.jpeg",
       "AssetKind": "All",
@@ -357,10 +459,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/tolgaAvcu.jpeg"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/userImage.png",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/userImage.png",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/userImage.png",
       "AssetKind": "All",
@@ -374,10 +476,10 @@
       "OriginalItemSpec": "wwwroot/Files/Images/userImage.png"
     },
     {
-      "Identity": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/Files/Images/veysi_ceri.jpg",
+      "Identity": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/Files/Images/veysi_ceri.jpg",
       "SourceId": "porosartapi",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/utku/Desktop/CE/porosart-api/porosartapi/wwwroot/",
+      "ContentRoot": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/wwwroot/",
       "BasePath": "_content/porosartapi",
       "RelativePath": "Files/Images/veysi_ceri.jpg",
       "AssetKind": "All",

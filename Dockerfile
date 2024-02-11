@@ -89,9 +89,65 @@
 # ENTRYPOINT ["dotnet", "porosartapi.dll"]
 
 
+# FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# WORKDIR /app
+# EXPOSE 8080
+
+# FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# WORKDIR /src
+# COPY ["porosartapi.csproj", "./"]
+# RUN dotnet restore "porosartapi.csproj"
+# COPY . .
+# WORKDIR "/src/."
+# RUN dotnet build "porosartapi.csproj" -c Release -o /app/build
+
+# FROM build AS publish
+# RUN dotnet publish "porosartapi.csproj" -c Release -o /app/publish
+
+# FROM base AS final
+# WORKDIR /app
+# COPY --from=publish /app/publish .
+# ENTRYPOINT ["dotnet", "porosartapi.dll"]
+
+# gcr.io/cloudrun/placeholder@sha256:4a1c3386c30f2994092028075a21758e904ea48380b23fefe78327ff52268c0e
+# crucial-oven-404213
+# docker build -t gcr.io/crucial-oven-404213/porosartapi:v1 .
+
+# docker push gcr.io/crucial-oven-404213/porosartapi:v1
+
+
+# Cloud builder for the dotnet builder.
+
+# steps:
+# - name: 'gcr.io/cloud-builders/docker'
+#   args:
+#   - 'build'
+#   - '--tag=gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+#   - '.'
+
+# # Build the test projects
+# - name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+#   args: ['build']
+#   dir: 'porosartapi'
+
+# - name: 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+#   args: ['build']
+#   dir: 'porosartapi'
+
+# # Specify the --no-source flag to indicate that no source code should be uploaded
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   args: ['builds', 'submit', '--config=cloudbuild.yaml', '--no-source']
+
+# images:
+# - 'gcr.io/porosart-api-c46jphp5cq-uc/dotnet'
+
+
+
+
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 80
+
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src

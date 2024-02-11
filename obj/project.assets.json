@@ -2388,19 +2388,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/utku/.nuget/packages/": {}
+    "/home/delivers-27/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/utku/Desktop/CE/porosart-api/porosartapi/porosartapi.csproj",
+      "projectUniqueName": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/porosartapi.csproj",
       "projectName": "porosartapi",
-      "projectPath": "/Users/utku/Desktop/CE/porosart-api/porosartapi/porosartapi.csproj",
-      "packagesPath": "/Users/utku/.nuget/packages/",
-      "outputPath": "/Users/utku/Desktop/CE/porosart-api/porosartapi/obj/",
+      "projectPath": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/porosartapi.csproj",
+      "packagesPath": "/home/delivers-27/.nuget/packages/",
+      "outputPath": "/home/delivers-27/Desktop/CE/backup for ubuntu/porosart-api/porosartapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/utku/.nuget/NuGet/NuGet.Config"
+        "/home/delivers-27/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2488,7 +2488,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.417/RuntimeIdentifierGraph.json"
       }
     }
   }
