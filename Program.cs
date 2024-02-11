@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using porosartapi.model.BusinessModel;
+using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,6 +56,15 @@ builder.Services.AddSwaggerGen(swagger =>
 
             BaseService._appSetting = appSettingsSection.Get<AppSettings>();
 
+            // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //             .AddMicrosoftIdentityWebApi(options =>
+            //     {
+            //         builder.Configuration.Bind("AzureAdB2C", options);
+
+            //         options.TokenValidationParameters.NameClaimType = "name";
+            //     },
+            //     options => { builder.Configuration.Bind("AzureAdB2C", options); });
+
             builder.Services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -72,6 +82,13 @@ builder.Services.AddSwaggerGen(swagger =>
                     ValidateAudience = false
                 };
             });
+            // .AddMicrosoftIdentityWebApi(options =>
+            // {
+            //     builder.Configuration.Bind("AzureAdB2C", options);
+
+            //     options.TokenValidationParameters.NameClaimType = "name";
+            // },
+            // options => { builder.Configuration.Bind("AzureAdB2C", options); });
 // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 // {
 //     opt.RequireHttpsMetadata = false;//bu de?i?icek abi ssl gelince true set et!!!!
@@ -109,8 +126,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseAuthentication();
     app.UseAuthorization();
-    app.UseSwagger();
-    app.UseSwaggerUI();
+
 }
 
 app.UseDefaultFiles();
@@ -118,7 +134,10 @@ app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
+// app.UseAuthentication();
 app.UseAuthorization();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllers();
 
