@@ -1,94 +1,119 @@
 using System.Reflection;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using porosartapi.model;
-using porosartapi.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using porosartapi.model.BusinessModel;
-using Microsoft.Identity.Web;
+using porosartapi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PorosArt")).UseSnakeCaseNamingConvention());
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options
+        .UseNpgsql(builder.Configuration.GetConnectionString("PorosArt"))
+        .UseSnakeCaseNamingConvention()
+);
 builder.Services.AddSwaggerGen(swagger =>
+{
+    //This is to generate the Default UI of Swagger Documentation
+    swagger.SwaggerDoc(
+        "v1",
+        new OpenApiInfo
+        {
+            Version = "v1",
+            Title = "JWT Token Authentication API",
+            Description = "ASP.NET 6 Web API"
+        }
+    );
+    // To Enable authorization using Swagger (JWT)
+    swagger.AddSecurityDefinition(
+        "Bearer",
+        new OpenApiSecurityScheme()
+        {
+            Name = "Authorization",
+            Type = SecuritySchemeType.ApiKey,
+            Scheme = "Bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description =
+                "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
+        }
+    );
+    swagger.AddSecurityRequirement(
+        new OpenApiSecurityRequirement
+        {
             {
-                //This is to generate the Default UI of Swagger Documentation  
-                swagger.SwaggerDoc("v1", new OpenApiInfo
+                new OpenApiSecurityScheme
                 {
-                    Version = "v1",
-                    Title = "JWT Token Authentication API",
-                    Description = "ASP.NET 6 Web API"
-                });
-                // To Enable authorization using Swagger (JWT)  
-                swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
-                {
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey,
-                    Scheme = "Bearer",
-                    BearerFormat = "JWT",
-                    In = ParameterLocation.Header,
-                    Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
-                });
-                swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
+                    Reference = new OpenApiReference
                     {
-                          new OpenApiSecurityScheme
-                            {
-                                Reference = new OpenApiReference
-                                {
-                                    Type = ReferenceType.SecurityScheme,
-                                    Id = "Bearer"
-                                }
-                            },
-                            new string[] {}
-
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
                     }
-                });
-            });
-            var appSettingsSection = builder.Configuration.GetSection("AppSettings");
+                },
+                new string[] { }
+            }
+        }
+    );
+});
+var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 
-            BaseService._appSetting = appSettingsSection.Get<AppSettings>();
+BaseService._appSetting = appSettingsSection.Get<AppSettings>();
 
-            // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //             .AddMicrosoftIdentityWebApi(options =>
-            //     {
-            //         builder.Configuration.Bind("AzureAdB2C", options);
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//             .AddMicrosoftIdentityWebApi(options =>
+//     {
+//         builder.Configuration.Bind("AzureAdB2C", options);
 
-            //         options.TokenValidationParameters.NameClaimType = "name";
-            //     },
-            //     options => { builder.Configuration.Bind("AzureAdB2C", options); });
+//         options.TokenValidationParameters.NameClaimType = "name";
+//     },
+//     options => { builder.Configuration.Bind("AzureAdB2C", options); });
 
-            builder.Services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddJwtBearer(x =>
-            {
-                x.RequireHttpsMetadata = true;
-                x.SaveToken = true;
-                x.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(BaseService._appSetting.Secret)),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-            });
-            // .AddMicrosoftIdentityWebApi(options =>
-            // {
-            //     builder.Configuration.Bind("AzureAdB2C", options);
+// builder
+//     .Services.AddAuthentication(x =>
+//     {
+//         x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+//         x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+//     })
+//     .AddJwtBearer(x =>
+//     {
+//         x.RequireHttpsMetadata = true;
+//         x.SaveToken = true;
+//         x.TokenValidationParameters = new TokenValidationParameters
+//         {
+//             ValidateIssuerSigningKey = true,
+//             IssuerSigningKey = new SymmetricSecurityKey(
+//                 Encoding.UTF8.GetBytes(BaseService._appSetting.Secret)
+//             ),
+//             ValidateIssuer = false,
+//             ValidateAudience = false
+//         };
+//     });
 
-            //     options.TokenValidationParameters.NameClaimType = "name";
-            // },
-            // options => { builder.Configuration.Bind("AzureAdB2C", options); });
+    builder.Services
+        .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.Authority = "https://login.microsoftonline.com/21206b2e-f8a2-48f8-b9e8-9c4b2c620790";
+            options.Audience = "16c4b9b4-4a6f-418e-a949-a2a31d07fdac";
+        });
+
+// .AddMicrosoftIdentityWebApi(options =>
+// {
+//     builder.Configuration.Bind("AzureAdB2C", options);
+
+//     options.TokenValidationParameters.NameClaimType = "name";
+// },
+// options => { builder.Configuration.Bind("AzureAdB2C", options); });
 // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 // {
 //     opt.RequireHttpsMetadata = false;//bu de?i?icek abi ssl gelince true set et!!!!
@@ -107,26 +132,27 @@ builder.Services.AddTransient<TeamService>();
 builder.Services.AddTransient<EventService>();
 builder.Services.AddTransient<WorkshopService>();
 builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("ClientPermission", policy =>
-                {
-                    policy
-                        .WithOrigins("http://localhost:3000", "https://imager.deliversai.net")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
-                });
-            });
+{
+    options.AddPolicy(
+        "ClientPermission",
+        policy =>
+        {
+            policy
+                .WithOrigins("http://localhost:3000", "https://imager.deliversai.net")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+        }
+    );
+});
 var app = builder.Build();
 app.UseCors("ClientPermission");
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseAuthentication();
     app.UseAuthorization();
-
 }
 
 app.UseDefaultFiles();
