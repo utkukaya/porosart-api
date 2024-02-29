@@ -118,7 +118,7 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins("http://localhost:3000", "https://imager.deliversai.net")
+                .WithOrigins("http://localhost:3000", "http://porosart.com")
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials();
