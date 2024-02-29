@@ -69,50 +69,29 @@ var appSettingsSection = builder.Configuration.GetSection("AppSettings");
 
 BaseService._appSetting = appSettingsSection.Get<AppSettings>();
 
-// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//             .AddMicrosoftIdentityWebApi(options =>
-//     {
-//         builder.Configuration.Bind("AzureAdB2C", options);
-
-//         options.TokenValidationParameters.NameClaimType = "name";
-//     },
-//     options => { builder.Configuration.Bind("AzureAdB2C", options); });
 
 // builder
-//     .Services.AddAuthentication(x =>
-//     {
-//         x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//         x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-//     })
-//     .AddJwtBearer(x =>
-//     {
-//         x.RequireHttpsMetadata = true;
-//         x.SaveToken = true;
-//         x.TokenValidationParameters = new TokenValidationParameters
+//     .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//     .AddMicrosoftIdentityWebApi(
+//         options =>
 //         {
-//             ValidateIssuerSigningKey = true,
-//             IssuerSigningKey = new SymmetricSecurityKey(
-//                 Encoding.UTF8.GetBytes(BaseService._appSetting.Secret)
-//             ),
-//             ValidateIssuer = false,
-//             ValidateAudience = false
-//         };
-//     });
+//             builder.Configuration.Bind("AzureAdB2C", options);
 
-    // builder.Services
-    //     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    //     .AddJwtBearer(options =>
-    //     {
-    //         options.Authority = "https://login.microsoftonline.com/21206b2e-f8a2-48f8-b9e8-9c4b2c620790";
-    //         options.Audience = "16c4b9b4-4a6f-418e-a949-a2a31d07fdac";
-    //     });
+//             options.TokenValidationParameters.NameClaimType = "name";
+//         },
+//         options =>
+//         {
+//             builder.Configuration.Bind("AzureAdB2C", options);
+//         }
+//     );
 
-        builder.Services.AddAuthentication(x =>
-        {
-            x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(x =>
+ builder
+    .Services.AddAuthentication(x =>
+    {
+        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(x =>
     {
         x.RequireHttpsMetadata = true;
         x.SaveToken = true;
@@ -126,49 +105,6 @@ BaseService._appSetting = appSettingsSection.Get<AppSettings>();
             ValidateAudience = false
         };
     });
-        // .AddJwtBearer(o =>
-        // {
-        //     o.RequireHttpsMetadata = false;              
-        //     var key = Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:Token"]);
-        //     o.SaveToken = true;
-        //     o.TokenValidationParameters = new TokenValidationParameters
-        //     {
-        //         ValidateIssuer = false,
-        //         ValidateAudience = false,
-        //         ValidateLifetime = true,
-        //         ValidateIssuerSigningKey = true,            
-        //         ClockSkew = TimeSpan.Zero,           
-        //         IssuerSigningKey = new SymmetricSecurityKey(key)
-        //     };
-        // })
-        // ;
-
-    // builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    //         .AddMicrosoftIdentityWebApi(options =>
-    // {
-    //     builder.Configuration.Bind("AzureAdB2C", options);
-
-    //     options.TokenValidationParameters.NameClaimType = "name";
-    // },
-    // options => { builder.Configuration.Bind("AzureAdB2C", options); });
-// .AddMicrosoftIdentityWebApi(options =>
-// {
-//     builder.Configuration.Bind("AzureAdB2C", options);
-
-//     options.TokenValidationParameters.NameClaimType = "name";
-// },
-// options => { builder.Configuration.Bind("AzureAdB2C", options); });
-// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
-// {
-//     opt.RequireHttpsMetadata = false;//bu de?i?icek abi ssl gelince true set et!!!!
-
-//     opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-//     {
-//         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(BaseService._appSetting.Secret)),
-//         ValidateIssuerSigningKey = true,
-//         ValidateLifetime = true,
-//     };
-// });
 
 builder.Services.AddTransient<UserService>();
 builder.Services.AddTransient<GameService>();
@@ -199,11 +135,11 @@ if (app.Environment.IsDevelopment())
     app.UseAuthorization();
 }
 
-  // "AzureAdB2C": {
-  //   "Instance": "https://porosartapib2c.b2clogin.com",
-  //   "Domain": "porosartapib2c.onmicrosoft.com",
-  //   "ClientId": "2ad1bc44-adcf-479d-928c-4dd115583b5a"
-  // },
+// "AzureAdB2C": {
+//   "Instance": "https://porosartapib2c.b2clogin.com",
+//   "Domain": "porosartapib2c.onmicrosoft.com",
+//   "ClientId": "2ad1bc44-adcf-479d-928c-4dd115583b5a"
+// },
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
